@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scroll-standard {
+    @apply relative;
+    overflow-y: overlay;
+  }
+  .scroll-standard::-webkit-scrollbar {
+    @apply bg-neutral-50;
+    @apply block;
+    width: 7px;
+    scroll-behavior: smooth;
+  }
+  .scroll-standard::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  .scroll-standard::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-neutral-300;
+    box-shadow: none;
+  }
+}
